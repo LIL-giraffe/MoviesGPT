@@ -3,12 +3,12 @@ import Header from './Header'
 import { validation } from '../utils/validation'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../utils/firebase';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [signIn, setSignIn] = useState(true)
     const [message, setMessage] = useState(null)
-    const navigate=useNavigate()
+    
 
     const toggle = () => {
         setSignIn(!signIn)
@@ -28,7 +28,7 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed up 
                     const user = userCredential.user;
-                    navigate('/browse')
+                    
                     // ...
                 })
                 .catch((error) => {
@@ -42,7 +42,7 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    navigate('/browse')
+                    
                     // ...
                 })
                 .catch((error) => {
