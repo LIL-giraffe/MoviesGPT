@@ -4,7 +4,7 @@ import InfoIcon from '@mui/icons-material/Info';
 
 const VideoTitle = ({title,overview}) => {
   return (
-    <div className=' w-full aspect-video absolute py-[20%] px-24 text-white bg-gradient-to-r from-black '>
+    <div className=' w-full aspect-video absolute py-[20%] px-24 text-white bg-gradient-to-r from-black  '>
         <h1 className=' font-bold text-6xl mb-4 ' >{title}</h1>
         <p className=' w-1/4 text-lg ' >{overview}</p>
         <div className=' flex mt-6 '>
