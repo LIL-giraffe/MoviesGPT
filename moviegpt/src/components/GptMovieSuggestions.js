@@ -4,7 +4,8 @@ import MovieList from './MovieList'
 
 const GptMovieSuggestions = () => {
   const { movieNames, tmbdResults } = useSelector((store) => store.gpt)
-  console.log(movieNames)
+  if(!movieNames){return null}
+  // console.log(movieNames)
   return (
     <div className=' m-4 p-4 text-white bg-opacity-90 bg-black' >
       {movieNames.map((movie, index) => (
